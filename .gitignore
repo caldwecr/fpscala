@@ -1,0 +1,100 @@
+# Extracted from https://github.com/ulrich/macaron-factory/blob/master/.gitignore
+# Ignore all dotfiles...
+.*
+# except for the following
+!.gitattributes
+!.gitignore
+!.slugignore
+!.sbtrc
+!.buildpacks
+!acceptancetests/templates/project-files-upload/.dominoignore
+!skeletons/.dominoignore
+!skeletons/.dominoresults
+!skeletons/quick-start/results/.dominokeep
+!testAssets/client/.dominoconfig/install_config.json
+!testAssets/project/.domino
+!.github
+!frontend/.babelrc
+!frontend/.storybook
+!frontend/.eslintrc.json
+
+# Ignore Play! working directory #
+db
+eclipse
+log
+logs
+precompiled
+project/project
+project/target
+target
+tmp
+test-result
+server.pid
+*.iml
+*.eml
+testAssets/*/results/
+
+/* frontend ignore */
+frontend/node_modules/
+frontend/npm-debug.log
+frontend/.env
+frontend/dist/main.css
+frontend/dist/main.css.map
+frontend/dist/bundle.js
+
+mergeRepos/*
+localStorage/*
+uncachedLocalStorage/*
+objectStorage/
+replicatorStorage/*
+scratch/
+/environments/
+app-container/git-config/projectrepos/*
+
+*.pyc
+
+syncScratch/
+syncScratch-tesla/
+mongobackups/
+
+domino.log
+
+acceptancetests/prod-credentials.txt
+
+blobs/
+playground/
+
+# Ignore R package project
+rPackage/domino/domino.Rproj
+
+# Ignore generated nginx.conf
+nginx.conf
+
+environment-config.json
+
+containers/
+
+dispatcherLocalStorage/
+
+diagnosticStatisticsLocalStorage/
+
+executor-state.json
+/targetExecutorVersion.txt
+
+
+# Ignore compiled artifacts that we package with the server
+server/public/cli/*
+
+# Ignore generated selenium files
+node_modules
+WDIO.xunit*
+selenium/errorShots/*.png
+
+# License sumary file
+licenses.txt
+
+replicatorStorage/
+
+*.wrk
+
+sbt-launch.jar
