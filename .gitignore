@@ -100,3 +100,4 @@ replicatorStorage/
 sbt-launch.jar
 *.history
 *.*~
+**/.history
