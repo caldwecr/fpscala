@@ -1,0 +1,12 @@
+object Sorting {
+
+  def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean = {
+    def loop(n: Int): Boolean =
+      if (n + 1 >= as.leng
+  }
+
+  def main(args: Array[String]): Unit = {
+
+  }
+}
+
