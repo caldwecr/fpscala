@@ -98,5 +98,5 @@ replicatorStorage/
 *.wrk
 
 sbt-launch.jar
-.history
+*.history
 *.*~
