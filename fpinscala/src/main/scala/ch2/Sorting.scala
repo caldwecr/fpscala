@@ -1,3 +1,5 @@
+package ch2
+
 object Sorting {
 
   def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean = {

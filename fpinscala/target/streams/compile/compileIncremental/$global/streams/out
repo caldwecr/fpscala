@@ -1,61 +1,15 @@
 [0m[[0mdebug[0m] [0m[naha] [0m
 [0m[[0mdebug[0m] [0m[naha] Initial source changes: [0m
 [0m[[0mdebug[0m] [0m[naha] 	removed:Set()[0m
-[0m[[0mdebug[0m] [0m[naha] 	added: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Sorting.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Fib.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/MyModule.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/example/Hello.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] 	added: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	modified: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Invalidated products: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] External API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Modified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Sorting.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Fib.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/MyModule.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/example/Hello.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] [0m
 [0m[[0mdebug[0m] [0m[naha] Sources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m[naha] 	product: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Sorting.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Fib.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/MyModule.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/example/Hello.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Sorting.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Fib.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/MyModule.scala, /home/caldwecr/code/fpscala/fpinscala/src/main/scala/example/Hello.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] Recompiling all 4 sources: invalidated sources (4) exceeded 50.0% of all sources[0m
-[0m[[0minfo[0m] [0mCompiling 4 Scala sources to /home/caldwecr/code/fpscala/fpinscala/target/scala-2.12/classes...[0m
-[0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.13:component from component compiler for Scala 2.12.1[0m
-[0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.13:component from component compiler for Scala 2.12.1[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 406b8364, interfacing (CompilerInterface) with Scala compiler version 2.12.1[0m
-[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
-[0m[[0mdebug[0m] [0m	-bootclasspath[0m
-[0m[[0mdebug[0m] [0m	/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes:/home/caldwecr/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.1.jar[0m
-[0m[[0mdebug[0m] [0m	-classpath[0m
-[0m[[0mdebug[0m] [0m	/home/caldwecr/code/fpscala/fpinscala/target/scala-2.12/classes[0m
-[0m[[0mdebug[0m] [0mScala compilation took 1.760136889 s[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidating /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Sorting.scala...[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Sorting.scala...[0m
-[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Sorting.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Sorting.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] The /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Sorting.scala source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m[naha] 	notify, wait, $asInstanceOf, isSorted, equals, asInstanceOf, synchronized, $isInstanceOf, Sorting, main, notifyAll, isInstanceOf, ==, clone, toString, !=, getClass, ne, eq, ##, finalize, hashCode.[0m
-[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidating /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Fib.scala...[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Fib.scala...[0m
-[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Fib.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Fib.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] The /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/Fib.scala source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m[naha] 	notify, fib, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, main, notifyAll, isInstanceOf, ==, clone, toString, Fib, !=, getClass, ne, eq, ##, finalize, hashCode.[0m
-[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidating /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/MyModule.scala...[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/MyModule.scala...[0m
-[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/MyModule.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/MyModule.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] The /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch2/MyModule.scala source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m[naha] 	notify, factorial, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, main, notifyAll, isInstanceOf, ==, clone, toString, !=, getClass, abs, ne, MyModule, eq, ##, finalize, hashCode.[0m
-[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidating /home/caldwecr/code/fpscala/fpinscala/src/main/scala/example/Hello.scala...[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /home/caldwecr/code/fpscala/fpinscala/src/main/scala/example/Hello.scala...[0m
-[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/example/Hello.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/example/Hello.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] The /home/caldwecr/code/fpscala/fpinscala/src/main/scala/example/Hello.scala source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m[naha] 	notify, wait, $asInstanceOf, equals, Greeting, asInstanceOf, executionStart, synchronized, $isInstanceOf, main, notifyAll, isInstanceOf, ==, clone, Hello, $init$, greeting, toString, args, !=, getClass, ne, eq, delayedInit, ##, finalize, hashCode.[0m
-[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
-[0m[[0mdebug[0m] [0m[naha] New invalidations:[0m
-[0m[[0mdebug[0m] [0m[naha] 	Set()[0m
-[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] Previously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0mdebug[0m] [0m[naha] 	Set()[0m
-[0m[[0mdebug[0m] [0m[naha] All newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set()[0m
