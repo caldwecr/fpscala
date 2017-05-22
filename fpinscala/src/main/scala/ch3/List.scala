@@ -20,6 +20,11 @@ object List {
     case Cons(x, xs) => x * product(xs)
   }
 
+  def tail[A](as: List[A]): Option[List[A]] = as match {
+    case Nil => None
+    case Cons(b, bs) => Some(bs)
+  }
+
   def apply[A](as: A*): List[A] =
     if (as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))

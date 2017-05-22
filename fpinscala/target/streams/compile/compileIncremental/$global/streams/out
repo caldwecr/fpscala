@@ -17,7 +17,7 @@
 [0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/caldwecr/code/fpscala/fpinscala/target/scala-2.12/classes...[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.13:component from component compiler for Scala 2.12.1[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.13:component from component compiler for Scala 2.12.1[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 7db12a34, interfacing (CompilerInterface) with Scala compiler version 2.12.1[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 5e7b4a1d, interfacing (CompilerInterface) with Scala compiler version 2.12.1[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes:/home/caldwecr/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.1.jar[0m
@@ -28,7 +28,14 @@
 [0m[[33mwarn[0m] [0mobject List {[0m
 [0m[[33mwarn[0m] [0m       ^[0m
 [0m[[33mwarn[0m] [0mone warning found[0m
-[0m[[0mdebug[0m] [0mScala compilation took 0.44025809 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 0.320192775 s[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch3/List.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch3/List.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch3/List.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(/home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch3/List.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] The /home/caldwecr/code/fpscala/fpinscala/src/main/scala/ch3/List.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	tail.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
 [0m[[0mdebug[0m] [0m[naha] New invalidations:[0m
 [0m[[0mdebug[0m] [0m[naha] 	Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set()[0m
