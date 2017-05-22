@@ -20,14 +20,28 @@ object List {
     case Cons(x, xs) => x * product(xs)
   }
 
-  def tail[A](as: List[A]): Option[List[A]] = as match {
-    case Nil => None
-    case Cons(b, bs) => Some(bs)
+  def tail[A](as: List[A]): List[A] = as match {
+    case Nil => Nil
+    case Cons(b, bs) => bs
   }
 
   def apply[A](as: A*): List[A] =
     if (as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))
+
+  def setHead[A](list: List[A], h: A): List[A] = {
+    if(h == ()) list
+    else Cons(h, list)
+  }
+
+
+
+
+
+
+
+
+
 
   def exerciseOne = List(1, 2, 3, 4, 5) match {
     case Cons(x, Cons(2, Cons(4, _))) => {
