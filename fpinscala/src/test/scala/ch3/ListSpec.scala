@@ -35,4 +35,16 @@ class ListSpec extends FlatSpec with Matchers {
   it should "be the tail if the head is Nothing" in {
     List.setHead(List(3, 4), ()) shouldEqual List(3, 4)
   }
+
+  "drop" should "be the list with n elements removed from the front" in {
+    List.drop(List(1, 2, 3, 4, 5), 2) shouldEqual List(3, 4, 5)
+  }
+
+  it should "be Nil when n is greater than the length of the list" in {
+    List.drop(List(1, 2), 3) shouldEqual Nil
+  }
+
+  it should "be Nil when n is equal to the length of the list" in {
+    List.drop(List(1, 2), 2) shouldEqual Nil
+  }
 }

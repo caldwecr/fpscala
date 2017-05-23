@@ -34,6 +34,12 @@ object List {
     else Cons(h, list)
   }
 
+  def drop[A](l: List[A], n: Int): List[A] = {
+    if(n > 0) {
+      drop(tail(l), n - 1)
+    }
+    else l
+  }
 
 
 
