@@ -59,4 +59,8 @@ class ListSpec extends FlatSpec with Matchers {
   it should "be the entire list when the predicate does not match the first element" in {
     List.dropWhile(List(1, 2, 3), (x: Int) => x < 0) shouldEqual List(1, 2, 3)
   }
+
+  "init" should "return a list with all but the last item" in {
+    List.init(List(1, 2, 3)) shouldEqual List(1, 2)
+  }
 }

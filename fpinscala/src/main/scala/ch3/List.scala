@@ -49,6 +49,12 @@ object List {
     }
   }
 
+  def init[A](l: List[A]): List[A] = l match {
+    case Nil => Nil
+    case Cons(h, Nil) => Nil
+    case Cons(h, t) => Cons(h, init(t))
+  }
+
   def exerciseOne = List(1, 2, 3, 4, 5) match {
     case Cons(x, Cons(2, Cons(4, _))) => {
       println("case 0")
