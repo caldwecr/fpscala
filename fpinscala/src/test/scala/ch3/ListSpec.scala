@@ -47,4 +47,16 @@ class ListSpec extends FlatSpec with Matchers {
   it should "be Nil when n is equal to the length of the list" in {
     List.drop(List(1, 2), 2) shouldEqual Nil
   }
+
+  "drop while" should "be the list of elements after and including the first element that does not match the predicate" in {
+    List.dropWhile(List(1, 2, 3), (x: Int) => x < 2) shouldEqual List(2, 3)
+  }
+
+  it should "be Nil when the list is empty" in {
+    List.dropWhile(List(), (x: Int) => x < 2) shouldEqual Nil
+  }
+
+  it should "be the entire list when the predicate does not match the first element" in {
+    List.dropWhile(List(1, 2, 3), (x: Int) => x < 0) shouldEqual List(1, 2, 3)
+  }
 }
