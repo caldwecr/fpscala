@@ -71,4 +71,11 @@ class ListSpec extends FlatSpec with Matchers {
   it should "be zero when the list is empty" in {
     List.length(List()) shouldEqual 0
   }
+
+  "foldLeft" should "reduce from right to left" in {
+    List.foldLeft(List(1, 2, 3), 0)((a: Int, b: Int) => {
+      println("a + b = " + (a + b))
+      a + b
+    }) shouldEqual 6
+  }
 }

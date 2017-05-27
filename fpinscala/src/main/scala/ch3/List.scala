@@ -60,6 +60,14 @@ object List {
     case Cons(x, xs) => f(x, foldRight(xs, z)(f))
   }
 
+
+  @annotation.tailrec
+  def foldLeft[A, B](as: List[A], z: B)(f: (B, A) => B): B = as match {
+    case Nil => z
+    case Cons(x, xs) => foldLeft(xs, f(z, x))(f)
+
+  }
+
   def length[A](as: List[A]): Int = foldRight(as, 0)((a, b) => b + 1)
 
   def exerciseOne = List(1, 2, 3, 4, 5) match {
