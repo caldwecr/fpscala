@@ -63,4 +63,12 @@ class ListSpec extends FlatSpec with Matchers {
   "init" should "return a list with all but the last item" in {
     List.init(List(1, 2, 3)) shouldEqual List(1, 2)
   }
+
+  "length" should "return the length of the list" in {
+    List.length(List(1, 2, 3)) shouldEqual 3
+  }
+
+  it should "be zero when the list is empty" in {
+    List.length(List()) shouldEqual 0
+  }
 }
