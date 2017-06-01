@@ -78,4 +78,20 @@ class ListSpec extends FlatSpec with Matchers {
       a + b
     }) shouldEqual 6
   }
+
+  "sumLeft" should "equal to the sum of the elements in the List" in {
+    List.sumLeft(List(444, 555, 666)) shouldEqual 444 + 555 + 666
+  }
+
+  "productLeft" should "equal to the product of the elements in the list" in {
+    List.productLeft(List(2, 3, 4)) shouldEqual 2 * 3 * 4
+  }
+
+  it should "be zero if any elements in the list are 0" in {
+    List.productLeft(List(2, 0, 4)) shouldEqual 0
+  }
+
+  "lengthLeft" should "equal to the number of items in the list" in {
+    List.lengthLeft(List("foo", "bar", "baz")) shouldEqual 3
+  }
 }
