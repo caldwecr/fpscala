@@ -94,4 +94,8 @@ class ListSpec extends FlatSpec with Matchers {
   "lengthLeft" should "equal to the number of items in the list" in {
     List.lengthLeft(List("foo", "bar", "baz")) shouldEqual 3
   }
+
+  "reverse" should "return the list with the elements in reverse order" in {
+    List.reverse(List("foo", "bar", "baz")) shouldEqual List("baz", "bar", "foo")
+  }
 }

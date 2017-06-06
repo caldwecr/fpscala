@@ -14,10 +14,18 @@ object List {
     case Cons(x, xs) => x + sum(xs)
   }
 
+  def sumLeft(ints: List[Int]): Int = {
+    foldLeft(ints, 0)((acc, curr) => curr + acc)
+  }
+
   def product(ds: List[Double]): Double = ds match {
     case Nil => 1.0
     case Cons(0.0, _) => 0.0
     case Cons(x, xs) => x * product(xs)
+  }
+
+  def productLeft(ds: List[Double]): Double = {
+    foldLeft(ds, 1.0)((prod, curr) => prod * curr)
   }
 
   def tail[A](as: List[A]): List[A] = as match {
@@ -69,6 +77,10 @@ object List {
   }
 
   def length[A](as: List[A]): Int = foldRight(as, 0)((a, b) => b + 1)
+
+  def lengthLeft[A](as: List[A]): Int = foldLeft(as, 0)((acc, _) => acc + 1)
+
+  def reverse[A](as: List[A]): List[A] = foldLeft(as, Nil: List[A])((res, curr) => Cons(curr, res))
 
   def exerciseOne = List(1, 2, 3, 4, 5) match {
     case Cons(x, Cons(2, Cons(4, _))) => {
