@@ -76,6 +76,12 @@ object List {
 
   }
 
+  def foldLeftUsingRight[A, B](as: List[A], z: B)(f: (B, A) => B): B =
+    foldRight(reverse(as), z)((a: A, b: B) => f(b, a))
+
+  def foldRightUsingLeft[A, B](as: List[A], z: B)(f: (A, B) => B): B =
+    foldLeft(reverse(as), z)((b: B, a: A) => f(a, b))
+
   def length[A](as: List[A]): Int = foldRight(as, 0)((a, b) => b + 1)
 
   def lengthLeft[A](as: List[A]): Int = foldLeft(as, 0)((acc, _) => acc + 1)

@@ -98,4 +98,12 @@ class ListSpec extends FlatSpec with Matchers {
   "reverse" should "return the list with the elements in reverse order" in {
     List.reverse(List("foo", "bar", "baz")) shouldEqual List("baz", "bar", "foo")
   }
+
+  "foldLeftUsingRight" should "be a left fold" in {
+    List.foldLeftUsingRight(List(1, 2, 3), Nil: List[Int])((acc, curr) => Cons(curr, acc)) shouldEqual List(3, 2, 1)
+  }
+
+  "foldRightUsingLeft" should "be a right fold" in {
+    List.foldRightUsingLeft(List(1, 2, 3), Nil: List[Int])((curr, acc) => Cons(curr, acc)) shouldEqual List(1, 2, 3)
+  }
 }
