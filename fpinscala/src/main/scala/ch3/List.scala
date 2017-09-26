@@ -111,11 +111,16 @@ object List {
     }
   }
 
-  def increment(as: List[Int]): List[Int] = {
-    as match {
-      case Nil => Nil
-      case Cons(x, xs) => Cons(x + 1, increment(xs))
-    }
+  // 3.16
+  def increment(as: List[Int]): List[Int] = as match {
+    case Nil => Nil
+    case Cons(x, xs) => Cons(x + 1, increment(xs))
+  }
+
+  // 3.17
+  def doubleAsString(as: List[Double]): List[String] = as match {
+    case Nil => Nil
+    case Cons(x, xs) => Cons(x.toString, doubleAsString(xs))
   }
 }
 

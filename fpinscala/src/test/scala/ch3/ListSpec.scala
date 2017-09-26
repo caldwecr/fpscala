@@ -110,4 +110,8 @@ class ListSpec extends FlatSpec with Matchers {
   "increment" should "add 1 to every item in the List" in {
     List.increment(List(7, 11, 13)) shouldEqual List(8, 12, 14)
   }
+
+  "doubleAsString" should "convert all the elements to string representations" in {
+    List.doubleAsString(List(3.5, -10.2, 99.0012)) shouldEqual List("3.5", "-10.2", "99.0012")
+  }
 }
