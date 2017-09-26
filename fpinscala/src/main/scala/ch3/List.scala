@@ -122,5 +122,8 @@ object List {
     case Nil => Nil
     case Cons(x, xs) => Cons(x.toString, doubleAsString(xs))
   }
+
+  // 3.18
+  def map[A, B](as: List[A])(f: A => B): List[B] = foldRightUsingLeft(as, Nil: List[B])((a, acc) => Cons[B](f(a), acc))
 }
 

@@ -114,4 +114,8 @@ class ListSpec extends FlatSpec with Matchers {
   "doubleAsString" should "convert all the elements to string representations" in {
     List.doubleAsString(List(3.5, -10.2, 99.0012)) shouldEqual List("3.5", "-10.2", "99.0012")
   }
+
+  "map" should "apply its function to all elements in the List" in {
+    List.map(List(5, 10, 25))(_ * 5) shouldEqual List(25, 50, 125)
+  }
 }
