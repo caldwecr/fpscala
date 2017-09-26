@@ -110,5 +110,12 @@ object List {
       101
     }
   }
+
+  def increment(as: List[Int]): List[Int] = {
+    as match {
+      case Nil => Nil
+      case Cons(x, xs) => Cons(x + 1, increment(xs))
+    }
+  }
 }
 

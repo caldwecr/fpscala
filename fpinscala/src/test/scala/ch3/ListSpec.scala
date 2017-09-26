@@ -106,4 +106,8 @@ class ListSpec extends FlatSpec with Matchers {
   "foldRightUsingLeft" should "be a right fold" in {
     List.foldRightUsingLeft(List(1, 2, 3), Nil: List[Int])((curr, acc) => Cons(curr, acc)) shouldEqual List(1, 2, 3)
   }
+
+  "increment" should "add 1 to every item in the List" in {
+    List.increment(List(7, 11, 13)) shouldEqual List(8, 12, 14)
+  }
 }
