@@ -118,4 +118,8 @@ class ListSpec extends FlatSpec with Matchers {
   "map" should "apply its function to all elements in the List" in {
     List.map(List(5, 10, 25))(_ * 5) shouldEqual List(25, 50, 125)
   }
+
+  "filter" should "remove elements that do not satisfy the given predicate" in {
+    List.filter(List(5, 10, 25, 99))(_ > 11) shouldEqual List(25, 99)
+  }
 }

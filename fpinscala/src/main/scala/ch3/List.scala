@@ -112,10 +112,7 @@ object List {
   }
 
   // 3.16
-  def increment(as: List[Int]): List[Int] = as match {
-    case Nil => Nil
-    case Cons(x, xs) => Cons(x + 1, increment(xs))
-  }
+  def increment(as: List[Int]): List[Int] = foldRightUsingLeft(as, Nil: List[Int])((a, acc) => Cons[Int](a + 1, acc))
 
   // 3.17
   def doubleAsString(as: List[Double]): List[String] = as match {
@@ -125,5 +122,13 @@ object List {
 
   // 3.18
   def map[A, B](as: List[A])(f: A => B): List[B] = foldRightUsingLeft(as, Nil: List[B])((a, acc) => Cons[B](f(a), acc))
+
+  // 3.19
+  def filter[A](as: List[A])(f: A => Boolean): List[A] = {
+    foldRightUsingLeft(as, Nil: List[A])((a, acc) => {
+      if (f(a)) Cons[A](a, acc)
+      else acc
+    })
+  }
 }
 
