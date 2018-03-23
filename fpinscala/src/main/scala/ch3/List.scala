@@ -111,6 +111,21 @@ object List {
     }
   }
 
+  // 3.14
+  def append[A](as: List[A], a: A): List[A] = {
+    foldLeft(reverse(as), List(a))((acc, x) => Cons[A](x, acc))
+  }
+
+  // 3.15a
+  def concat[A](front: List[A], back: List[A]): List[A] = {
+    foldRightUsingLeft(front, back)((a, acc) => { Cons[A](a, acc) })
+  }
+
+  // 3.15
+  def flatten[A](lists: List[List[A]]): List[A] = {
+    foldRightUsingLeft(lists, Nil: List[A])((a, acc) => concat(a, acc))
+  }
+
   // 3.16
   def increment(as: List[Int]): List[Int] = foldRightUsingLeft(as, Nil: List[Int])((a, acc) => Cons[Int](a + 1, acc))
 
@@ -130,5 +145,10 @@ object List {
       else acc
     })
   }
+
+  // 3.20
+//  def flatMap[A, B](as: List[A])(f: A => List[B]): List[B] = {
+//
+//  }
 }
 

@@ -107,6 +107,22 @@ class ListSpec extends FlatSpec with Matchers {
     List.foldRightUsingLeft(List(1, 2, 3), Nil: List[Int])((curr, acc) => Cons(curr, acc)) shouldEqual List(1, 2, 3)
   }
 
+  "append" should "add the item to the end of the List" in {
+    List.append(List("foo", "bar"), "baz") shouldEqual List("foo", "bar", "baz")
+  }
+
+  "flatten" should "flatten a List of Lists into a List" in {
+    List.flatten(List(
+      List(1, 2, 3),
+      List(10, 20, 30, 40),
+      List(100, 200, 300, 400, 500)
+    )) shouldEqual List(1, 2, 3, 10, 20, 30, 40, 100, 200, 300, 400, 500)
+  }
+
+  "concat" should "append the items from the second list to the first list" in {
+    List.concat(List(1, 3, 4), List(10, 100, 1000)) shouldEqual List(1, 3, 4, 10, 100, 1000)
+  }
+
   "increment" should "add 1 to every item in the List" in {
     List.increment(List(7, 11, 13)) shouldEqual List(8, 12, 14)
   }
