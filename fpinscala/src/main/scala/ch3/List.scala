@@ -172,5 +172,17 @@ object List {
       flatMap(map(headAsList(second))(sh => sh + f))(Cons[Int](_, sumCorresponding(fs, tail(second))))
     }
   }
+
+  // 3.23
+//  @annotation.tailrec
+  def zipWith[A, B](first: List[A], second: List[A])(g: (A, A) => B): List[B] = first match {
+    case Nil => Nil
+    case Cons(f, Nil) => map(headAsList(second))(sh => g(sh, f))
+    case Cons(f, fs) => {
+      flatMap(map(headAsList(second))(sh => g(sh, f)))(
+        Cons[B](_, zipWith(fs, tail(second))(g))
+      )
+    }
+  }
 }
 

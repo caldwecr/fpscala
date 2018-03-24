@@ -158,4 +158,8 @@ class ListSpec extends FlatSpec with Matchers {
   "headAsList" should "return a List with just the head when the input List is not empty" in {
     List.headAsList(List(1, 2, 3)) shouldEqual List(1)
   }
+
+  "zipWith" should "apply the function to each corresponding pair" in {
+    List.zipWith(List(1, 2, 3), List(4, 5, 6))(_ * _) shouldEqual List(4, 10, 18)
+  }
 }
