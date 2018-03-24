@@ -28,6 +28,11 @@ object List {
     foldLeft(ds, 1.0)((prod, curr) => prod * curr)
   }
 
+  def headAsList[A](as: List[A]): List[A] = as match {
+    case Nil => Nil
+    case Cons(b, _) => List(b)
+  }
+
   def tail[A](as: List[A]): List[A] = as match {
     case Nil => Nil
     case Cons(b, bs) => bs
@@ -55,12 +60,6 @@ object List {
       if(f(h)) dropWhile(t, f)
       else l
     }
-  }
-
-  def init[A](l: List[A]): List[A] = l match {
-    case Nil => Nil
-    case Cons(h, Nil) => Nil
-    case Cons(h, t) => Cons(h, init(t))
   }
 
   def foldRight[A, B](as: List[A], z: B)(f: (A, B) => B): B = as match {
@@ -156,6 +155,21 @@ object List {
     flatMap(as){ a =>
       if (f(a)) List(a)
       else Nil: List[A]
+    }
+  }
+
+  def init[A](l: List[A]): List[A] = l match {
+    case Nil => Nil
+    case Cons(h, Nil) => Nil
+    case Cons(h, t) => Cons(h, init(t))
+  }
+
+  // 3.22
+  def sumCorresponding(first: List[Int], second: List[Int]): List[Int] = first match {
+    case Nil => Nil
+    case Cons(f, Nil) => map(headAsList(second))(sh => sh + f)
+    case Cons(f, fs) => {
+      flatMap(map(headAsList(second))(sh => sh + f))(Cons[Int](_, sumCorresponding(fs, tail(second))))
     }
   }
 }

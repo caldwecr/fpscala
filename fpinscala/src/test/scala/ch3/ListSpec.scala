@@ -146,4 +146,16 @@ class ListSpec extends FlatSpec with Matchers {
   "filterByFlatMap" should "remove elements that do not satisfy the given predicate" in {
     List.filterByFlatMap(List(5, 10, 25, 99))(_ > 11) shouldEqual List(25, 99)
   }
+
+  "sumCorresponding" should "sum the corresponding elements in two lists" in {
+    List.sumCorresponding(List(1, 2, 3), List(4, 5, 6)) shouldEqual List(5, 7, 9)
+  }
+
+  "headAsList" should "return the empty list when the input List is empty" in {
+    List.headAsList(Nil: List[Int]) shouldEqual List()
+  }
+
+  "headAsList" should "return a List with just the head when the input List is not empty" in {
+    List.headAsList(List(1, 2, 3)) shouldEqual List(1)
+  }
 }
