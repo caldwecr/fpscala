@@ -147,8 +147,8 @@ object List {
   }
 
   // 3.20
-//  def flatMap[A, B](as: List[A])(f: A => List[B]): List[B] = {
-//
-//  }
+  def flatMap[A, B](as: List[A])(f: A => List[B]): List[B] = {
+    flatten(map(as)(f))
+  }
 }
 

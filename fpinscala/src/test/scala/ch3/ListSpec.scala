@@ -138,4 +138,8 @@ class ListSpec extends FlatSpec with Matchers {
   "filter" should "remove elements that do not satisfy the given predicate" in {
     List.filter(List(5, 10, 25, 99))(_ > 11) shouldEqual List(25, 99)
   }
+
+  "flatMap" should "flatten the results of the passed function" in {
+    List.flatMap(List(1, 2 ,3))(i => List(i, i)) shouldEqual List(1, 1, 2, 2, 3, 3)
+  }
 }
