@@ -151,6 +151,10 @@ class ListSpec extends FlatSpec with Matchers {
     List.sumCorresponding(List(1, 2, 3), List(4, 5, 6)) shouldEqual List(5, 7, 9)
   }
 
+  "sumCorrespondingToo" should "sum the corresponding elements in two lists" in {
+    List.sumCorrespondingToo(List(1, 2, 3), List(4, 5, 6)) shouldEqual List(5, 7, 9)
+  }
+
   "headAsList" should "return the empty list when the input List is empty" in {
     List.headAsList(Nil: List[Int]) shouldEqual List()
   }
@@ -161,5 +165,9 @@ class ListSpec extends FlatSpec with Matchers {
 
   "zipWith" should "apply the function to each corresponding pair" in {
     List.zipWith(List(1, 2, 3), List(4, 5, 6))(_ * _) shouldEqual List(4, 10, 18)
+  }
+
+  "zipWithToo" should "apply the function to each corresponding pair" in {
+    List.zipWithToo(List(1, 2, 3), List(4, 5, 6))(_ * _) shouldEqual List(4, 10, 18)
   }
 }

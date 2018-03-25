@@ -165,12 +165,19 @@ object List {
   }
 
   // 3.22
+//  @annotation.tailrec
   def sumCorresponding(first: List[Int], second: List[Int]): List[Int] = first match {
     case Nil => Nil
     case Cons(f, Nil) => map(headAsList(second))(sh => sh + f)
     case Cons(f, fs) => {
+
       flatMap(map(headAsList(second))(sh => sh + f))(Cons[Int](_, sumCorresponding(fs, tail(second))))
+//      flatMap(sumCorresponding(List(f), headAsList(second)))(Cons[Int](_, sumCorresponding(fs, tail(second))))
     }
+  }
+
+  def sumCorrespondingToo(first: List[Int], second: List[Int]): List[Int] = {
+    zipWithToo(first, second)(_ + _)
   }
 
   // 3.23
@@ -182,6 +189,14 @@ object List {
       flatMap(map(headAsList(second))(sh => g(sh, f)))(
         Cons[B](_, zipWith(fs, tail(second))(g))
       )
+    }
+  }
+
+  @annotation.tailrec
+  def zipWithToo[A, B](first: List[A], second: List[A], reversedAcc: List[B] = Nil)(g: (A, A) => B): List[B] = {
+    first match {
+      case Nil => reverse(reversedAcc)
+      case Cons(f, fs) => zipWithToo(fs, tail(second), flatMap(map(headAsList(second))(sh => g(sh, f)))(Cons(_, reversedAcc)))(g)
     }
   }
 }
