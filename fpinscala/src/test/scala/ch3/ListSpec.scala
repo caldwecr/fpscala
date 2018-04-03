@@ -170,4 +170,32 @@ class ListSpec extends FlatSpec with Matchers {
   "zipWithToo" should "apply the function to each corresponding pair" in {
     List.zipWithToo(List(1, 2, 3), List(4, 5, 6))(_ * _) shouldEqual List(4, 10, 18)
   }
+
+  "zipAndCheckEquality" should "be true for all equal corresponding items and false otherwise" in {
+    List.zipAndCheckEquality(List(1, 2, 3, 4), List(2, 2, 2, 4)) shouldEqual List(false, true, false, true)
+  }
+
+  "startWith" should "return true when the list begins with the prefix" in {
+    List.startsWith(List("cat", "mouse", "dog"), List("cat", "mouse")) shouldBe true
+  }
+
+  it should "return false when the list does not being with the entire prefix" in {
+    List.startsWith(List("cat", "mouse", "dog"), List("cat", "dog")) shouldBe false
+  }
+
+  "hasSubsequence" should "return true when the sup contains the sub at the beginning" in {
+    List.hasSubsequence(List(1, 2, 3, 4), List(1, 2)) shouldBe true
+  }
+
+  it should "return true when the sup contains the sub in the middle" in {
+    List.hasSubsequence(List(1, 2, 3, 4), List(2, 3)) shouldBe true
+  }
+
+  it should "return true when the sup contains the sub at the end" in {
+    List.hasSubsequence(List(1, 2, 3, 4), List(4)) shouldBe true
+  }
+
+  it should "return false the the sup does not contain the sub" in {
+    List.hasSubsequence(List(1, 2, 3, 4), List(3, 2)) shouldBe false
+  }
 }

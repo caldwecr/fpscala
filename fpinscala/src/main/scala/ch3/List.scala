@@ -193,10 +193,31 @@ object List {
   }
 
   @annotation.tailrec
-  def zipWithToo[A, B](first: List[A], second: List[A], reversedAcc: List[B] = Nil)(g: (A, A) => B): List[B] = {
-    first match {
+  def zipWithToo[A, B](short: List[A], long: List[A], reversedAcc: List[B] = Nil)(g: (A, A) => B): List[B] = {
+    short match {
       case Nil => reverse(reversedAcc)
-      case Cons(f, fs) => zipWithToo(fs, tail(second), flatMap(map(headAsList(second))(sh => g(sh, f)))(Cons(_, reversedAcc)))(g)
+      case Cons(f, fs) => zipWithToo(fs, tail(long), flatMap(map(headAsList(long))(sh => g(sh, f)))(Cons(_, reversedAcc)))(g)
+    }
+  }
+
+  def zipAndCheckEquality[A](first: List[A], second: List[A]): List[Boolean] = {
+    zipWithToo(first, second)(_ == _)
+  }
+
+  def startsWith[A](list: List[A], prefix: List[A]): Boolean = {
+    foldRightUsingLeft(zipAndCheckEquality(prefix, list), true)((curr: Boolean, acc: Boolean) => curr && acc)
+  }
+  // 3.24
+  @annotation.tailrec
+  def hasSubsequence[A](sup: List[A], sub: List[A]): Boolean = {
+    if (length(sub) > length(sup)) false
+    else {
+      sup match {
+        case Nil => sup == sub
+        case Cons(f, fs) =>
+          if (startsWith(Cons(f, fs), sub)) true
+          else hasSubsequence(fs, sub)
+      }
     }
   }
 }
